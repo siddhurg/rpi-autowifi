@@ -1,0 +1,10 @@
+[Unit]
+Description=Auto Wi-Fi AP and Setup UI
+After=network.target
+
+[Service]
+ExecStart=/bin/bash /home/pi/auto_ap_switch.sh
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
